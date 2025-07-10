@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Pulga Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/estilos.css">
+</head>
+<script src="assets/js/fechaHora.js"></script>
+
+<body>
+  <div id="fechaHora" style="text-align:center; margin-top:10px;"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Pulga Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h2 class="text-center mb-4">Formulario de Contacto</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" name="correo">
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+  </main>
+
+  <footer class="bg-dark text-white text-center p-3 mt-4">
+    <p>Pulga Store - Daniela Herrera</p>
+  </footer>
+  <script src="assets/js/fechaHora.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+      const nombre = document.getElementById("nombre").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+
+      if (!nombre || !correo || !mensaje) {
+        alert("por favor completa todos los campos");
+        event.preventDefault();
+        return;
+      }
+
+      const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (!emailRegex.test(correo)) {
+        alert("por favor ingresa un correo válido");
+        event.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulga Store - Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</head>
+<body>
+  <div id="fechaHora" style="text-align:center; margin-top:10px;"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Pulga Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-light text-center py-4">
+    <h1 class="display-5">Pulga Store</h1>
+    <p>Libreria </p>
+  </header>
+
+  <main class="container my-4">
+    <section class="row">
+      <div class="col-md-4 mb-3">
+        <a data-fancybox="gallery" href="assets/img/isabel.jpg">
+          <img src="assets/img/isabel.png" class="img-fluid rounded" alt="Libro Isabel Allende">
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a data-fancybox="gallery" href="assets/img/bluesisters.jpg">
+          <img src="assets/img/bluesisters.jpg" class="img-fluid rounded" alt="Libro Blue Sisters">
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a data-fancybox="gallery" href="assets/img/potter.jpg">
+        <img src="assets/img/potter.jpg" class="img-fluid rounded" alt="Libro Harry Potter">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center p-3">
+    <p>Pulga Store - Daniela Herrera</p>
+  </footer>
+  <script src="assets/js/fechaHora.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
